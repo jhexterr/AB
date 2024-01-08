@@ -1,0 +1,142 @@
+.footer {
+    background-image: url("/img/footer-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0 30px;
+    &-text{
+        text-align: center;
+        h1{
+            font-size: 3.5rem;
+            color: $clr-light;
+        }
+        a{
+            color: $clr-light;
+            display: inline-block;
+            border: 1px solid $clr-hover;
+            padding: .9rem 3.5rem;
+            font-size: 2rem;
+            margin-top: .5rem;
+            background: $clr-hover;
+            border-radius: .58rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            &:hover{
+                background: $clr-light;
+                color: $clr-hover;
+                transition: 0.8s ease;
+            }
+        }
+    }
+    &-location-timing{
+        h2{
+            color: $clr-light;
+            font-size: 3rem;
+            font-weight: 100;
+            margin-top: 4rem;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 1rem;
+        }
+        p{
+            color: $clr-light;
+            line-height: 2;
+            font-size: 1.8rem;
+            font-weight: 100;
+            font-family: 'Inter', sans-serif;
+        }
+    }
+    &-subs{
+        margin-top: 4rem;
+        h2{
+            color: $clr-light;
+            font-family: 'Inter', sans-serif;
+            font-size: 2.3rem;
+            font-weight: 100;
+            margin-bottom: 1rem;
+        }
+        &-email{
+            input{
+                // padding: 12px 17rem;
+                width: 45rem;
+                height: 5rem;
+                font-size: 1.6rem;
+                font-family: 'Inter', sans-serif;
+                background: $clr-light;
+                border: 0;
+                border-radius: 10px;
+                padding: 2rem;
+                outline: none;
+            }
+            
+        }
+    }
+    &-contacts{
+        h2{
+            color: $clr-light;
+            font-family: 'Inter', sans-serif;
+            font-size: 3rem;
+            font-weight: 100;
+            // margin-bottom: 1rem;
+            margin-top: 4rem;
+        }
+        a{
+            font-size: 1.8rem;
+            font-weight: 100;
+            font-family: 'Inter', sans-serif;
+            color: $clr-light;
+            display: flex;
+            flex-direction: column;
+            line-height: 2;
+            &:hover{
+                color: $clr-hover;
+            }
+        }
+        ul{
+            display: flex;
+            gap: 1.5rem;
+            li{
+                i{
+                    color: $clr-light;
+                    font-size: 2.3rem;
+                    cursor: pointer;
+                    margin-top: 1rem;
+                    &:hover{
+                        color: $clr-hover;
+                    }
+                }
+            }
+        }
+    }
+    &-last{
+        h2{
+            text-align: center;
+            margin-top: 6rem;
+            color: $clr-light;
+            font-family: 'Inter', sans-serif;
+            font-weight: 100;
+            font-size: 18px;
+        }
+    }
+}
+
+@include mediaQuery($break-lg){
+    .footer{
+        &-middle{
+            display: grid;
+            grid-template-columns: 1.2fr 1.8fr 1fr;
+            gap: 12rem;
+        }
+        &-text{
+            h1{
+                font-size: 3.5rem;
+            }
+        }
+        &-subs{
+            margin-top: 20rem;
+            &-email{
+                input{
+                    width: 30rem;
+                }
+            }
+        }
+    }
+}

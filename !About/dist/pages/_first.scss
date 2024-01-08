@@ -1,0 +1,47 @@
+.first{
+    background-image: url("/img/banner-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #665b5b;
+    background-blend-mode: multiply;
+    padding: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: multiply;
+    
+    &-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $clr-light;
+        text-transform: uppercase;
+        font-size: 3.2rem;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@include mediaQuery($break-md){
+    .first{
+        padding: 150px 0 135px;
+        &-text{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 4rem;
+        }
+    }
+}
+@include mediaQuery($break-xl){
+    .first{
+        padding: 250px 0 135px;
+        &-text{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 4rem;
+        }
+    }
+}

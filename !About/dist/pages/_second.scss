@@ -1,0 +1,142 @@
+.second{
+    background-color: #F0F2F4;
+    &-logo{
+        margin-top: 4.8rem;
+        img{
+            max-width: 100%;
+            border-radius: 20px;
+            height: auto;
+        }
+    }
+    &-location{
+        background: $clr-light;
+        margin-top: 48px;
+        padding: 32px;
+        border-radius: 20px;
+        
+        h3{
+            font-size: 2.5rem;
+            font-weight: 300;
+            font-family: 'Inter', sans-serif;          
+            margin-bottom: 1rem;
+
+        }
+        p{
+            font-size: 16px;
+            margin-bottom: 5px;
+            font-family: 'Inter', sans-serif;
+        }
+        ul{
+            display: flex;
+            margin-top: 1rem;
+            li{
+                font-size: 16px;
+                font-family: 'Inter', sans-serif;
+                
+            }
+        }
+    }
+    &-text{
+        margin-top: 5rem;
+        h1{
+            line-height: 120%;
+            font-size: 38px;
+            font-weight: 600;
+        }
+        h2{
+            font-family: 'Inter', sans-serif;
+            margin-top: 1rem;
+        }
+        p{
+            font-family: 'Inter', sans-serif;
+            color: #797D86;
+            font-size: 16px;
+            line-height: 130%;
+            margin-top: 1rem;
+        }
+        ul{
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            margin-bottom: 7rem;
+            li{
+                margin: 1.1rem;
+                p{
+                    font-size: 19px;
+                    color: $clr-dark;
+                    font-weight: 600;
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@include mediaQuery($break-md){
+    .second{
+        &-logo{
+            display: flex;
+            justify-content: center;
+            margin-top: 6rem;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        &-location{
+            position: absolute;
+            top: 68%;
+            left: 23rem;
+        }
+        &-text{
+            ul{
+                display: flex;
+                gap: 6rem;
+            }
+        }
+    }
+}
+
+@include mediaQuery($break-lg){
+    .second{
+        &-logo{
+            img{
+                width: 90%;
+            }
+        }
+        &-location{
+            left: 37rem;
+            top: 80%;
+        }
+    }
+}
+
+@include mediaQuery($break-xl){
+    .second{
+        padding: 3rem;
+        &-logo{
+            display: block;
+            padding: 2rem;
+            img{
+                width: 100%;
+            }
+        }
+        &-wrapper{
+            display: flex;
+            align-items: center;
+            
+        }
+        &-text{
+            max-width: 60rem;
+            h1{
+                font-size: 5.5rem;
+            }
+        }
+        &-location{
+            left: 50rem;
+        }
+    }
+}

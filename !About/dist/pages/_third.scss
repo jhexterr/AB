@@ -1,0 +1,199 @@
+.third{
+    padding: 1rem;
+    margin-top: 3.5rem;
+    margin-bottom: 3rem;
+    &-text{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h1{
+            text-transform: uppercase;
+            font-size: 39px;
+        }
+        p{
+            color: #797D86;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 4rem;
+        }
+    }
+    &-agents-one, &-agents-two, &-agents-three, &-agents-four{
+        background-color: #F0F2F4 ;
+        border-radius: 10px;
+        padding-top: 4rem;
+        text-align: center;
+        img{
+            margin-bottom: 1rem;
+        }
+        h2{
+          font-family: 'Inter', sans-serif;  
+          font-size: 23px;
+        }
+        p{
+            color: #797D86;
+            font-family: 'Inter', sans-serif;  
+            font-size: 16px;
+            font-weight: 500;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            li{
+                margin-top: 1.7rem;
+                i{
+                    font-size: 24px;
+                    color: #2C2D2F;
+                    margin-bottom: 6rem;
+                    cursor: pointer;
+                    &:hover{
+                        color: $clr-hover;
+                    }
+                }
+            }
+        }
+    }
+    
+    // &-agents-two{
+    //     background-color: #F0F2F4 ;
+    //     border-radius: 10px;
+    //     padding-top: 4rem;
+    //     text-align: center;
+    //     img{
+    //         margin-bottom: 1rem;
+    //     }
+    //     h2{
+    //       font-family: 'Inter', sans-serif;  
+    //       font-size: 23px;
+    //     }
+    //     p{
+    //         color: #797D86;
+    //         font-family: 'Inter', sans-serif;  
+    //         font-size: 16px;
+    //         font-weight: 500;
+    //     }
+    //     ul{
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         gap: 1.5rem;
+    //         li{
+    //             margin-top: 1.7rem;
+    //             i{
+    //                 font-size: 24px;
+    //                 color: #2C2D2F;
+    //                 margin-bottom: 6rem;
+    //                 cursor: pointer;
+    //                 &:hover{
+    //                     color: $clr-hover;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    // &-agents-three{
+    //     background-color: #F0F2F4 ;
+    //     border-radius: 10px;
+    //     padding-top: 4rem;
+    //     text-align: center;
+    //     img{
+    //         margin-bottom: 1rem;
+    //     }
+    //     h2{
+    //       font-family: 'Inter', sans-serif;  
+    //       font-size: 23px;
+    //     }
+    //     p{
+    //         color: #797D86;
+    //         font-family: 'Inter', sans-serif;  
+    //         font-size: 16px;
+    //         font-weight: 500;
+    //     }
+    //     ul{
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         gap: 1.5rem;
+    //         li{
+    //             margin-top: 1.7rem;
+    //             i{
+    //                 font-size: 24px;
+    //                 color: #2C2D2F;
+    //                 margin-bottom: 6rem;
+    //                 cursor: pointer;
+    //                 &:hover{
+    //                     color: $clr-hover;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    // &-agents-four{
+    //     background-color: #F0F2F4 ;
+    //     border-radius: 10px;
+    //     padding-top: 4rem;
+    //     text-align: center;
+    //     img{
+    //         margin-bottom: 1rem;
+    //     }
+    //     h2{
+    //       font-family: 'Inter', sans-serif;  
+    //       font-size: 23px;
+    //     }
+    //     p{
+    //         color: #797D86;
+    //         font-family: 'Inter', sans-serif;  
+    //         font-size: 16px;
+    //         font-weight: 500;
+    //     }
+    //     ul{
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         gap: 1.5rem;
+    //         li{
+    //             margin-top: 1.7rem;
+    //             i{
+    //                 font-size: 24px;
+    //                 color: #2C2D2F;
+    //                 margin-bottom: 6rem;
+    //                 cursor: pointer;
+    //                 &:hover{
+    //                     color: $clr-hover;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+}
+
+@include mediaQuery($break-md){
+    .third{
+        &-agents{
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            gap: 0 4rem ;
+        }
+    }
+}
+@include mediaQuery($break-lg){
+    .third{
+        &-agents{
+            display: flex;
+            gap: unset;
+            justify-content: space-between;
+            
+        }
+    }
+}
+@include mediaQuery($break-xl){
+    .third{
+        &-agents{
+            justify-content: space-between;   
+        }
+        &-agents-one, &-agents-two, &-agents-three, &-agents-four{
+            padding: 3rem;
+        }
+    }
+}

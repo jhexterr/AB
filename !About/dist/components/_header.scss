@@ -1,0 +1,141 @@
+.header{
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    padding: 1rem 1rem;
+    &-wrapper{
+        @include centerAll;
+    }
+    &-logo{
+        img{
+            width: 19rem;
+        }
+    }
+    &-nav{
+        position: absolute;
+        right: 0;
+        top: 7.5rem;
+        margin-right: 1.1rem;
+        border-radius: 8px;
+        background: #0D0D0D;
+        overflow: hidden;
+        height: 0;
+        transition: 0.5s ease;
+        @include transitionEZ;
+        &.open{
+            height: 22.2rem;
+            @include transitionEZ;
+        }
+        ul{
+            padding: 16px 20px;
+            margin-bottom: 8px;
+            li{
+                margin-bottom: 8px;
+                a{
+                    color: $clr-light;
+                    font-family: sans-serif;
+                    font-size: 19px;
+                    &:hover{
+                        color: $clr-hover;
+                    }
+                }
+            }
+        }
+    }
+    &-burger{
+        cursor: pointer;
+        span{
+            width: 21px;
+            height: 4px;
+            display: block;
+            background: $clr-light;
+            margin-bottom: 4px;
+        }
+    }
+    &-icon{
+        display: none;
+        color: $clr-hover;
+        &-container{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            a{
+                color: $clr-light;
+                font-size: 2rem;
+                cursor: pointer;
+                &:hover{
+                    color: $clr-hover;
+                }
+            }
+            i{
+                font-size: 3rem;
+                cursor: pointer;
+            }
+        }
+    }
+    &-nav-2{
+        display: none;
+        ul{
+            display: flex;
+            gap: 3rem;
+            li{
+                a{
+                    font-size: 1.5rem;
+                    color: $clr-light;
+                    font-family: 'Inter',sans-serif;
+                    &:hover{
+                        color: $clr-hover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaQuery($break-md){
+    .header{
+        padding: 1rem 2rem;
+        &-nav{
+            right: 1.3rem;
+        }
+    }
+}
+@include mediaQuery($break-lg){
+    .header{
+        &-burger{
+            display: none;
+        }
+        &-icon{
+            display: unset;
+        }
+        &-nav{
+            display: none;
+        }
+        &-nav-2{
+            display: unset;
+        }
+    }
+}
+
+@include mediaQuery($break-xl){
+    .header{
+        &-nav-2{
+            display: unset;
+            ul{
+                li{
+                    a{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+        &-icon{
+            &-container{
+                a{
+                    font-size: 2.8rem;
+                }
+        }
+    }
+    }
+    
+}

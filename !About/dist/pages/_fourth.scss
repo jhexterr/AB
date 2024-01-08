@@ -1,0 +1,70 @@
+.fourth{
+    background: #F0F2F4;
+    padding: 1rem;
+    position: relative;
+    &-text{
+        text-align: center;
+        margin-top: 3rem;
+        h1{
+            font-size: 3.6rem;
+        }
+        p{
+            color: #797D86;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 4rem;
+            margin-top: 1rem;
+        }
+    }
+    &-agent-one, &-agent-two, &-agent-three{
+        background-color: $clr-light;
+        margin-bottom: 5rem;
+        border-radius: 2rem;
+        &-bg{
+            img{
+                border-top-left-radius: 2rem;
+                border-top-right-radius: 2rem;
+                width: 100%;
+            }
+            h2{
+                font-size: 2.5rem;
+                text-align: center;
+                font-family: 'Inter',sans-serif;
+            }
+            p{
+                font-size: 1.5rem;
+                font-family: 'Inter', sans-serif;
+                text-align: center;
+                margin-bottom: 2rem;
+                padding: 1.8rem;
+            }
+        }
+        &-quote{
+            img{
+                position: absolute;
+                top: 0;
+                left: 2rem;
+            }
+        }
+    }
+}
+@include mediaQuery($break-lg){
+    .fourth{
+        &-agent{
+            display: flex;
+            gap: unset;
+            gap: 3rem;
+            
+        }
+    }
+}
+@include mediaQuery($break-xl){
+    .third{
+        &-agents{
+            justify-content: space-between;   
+        }
+        &-agents-one, &-agents-two, &-agents-three, &-agents-four{
+            padding: 3rem;
+        }
+    }
+}
